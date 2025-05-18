@@ -12,22 +12,22 @@ body{
     justify-content: center;    
     align-items: center;
     height: 100vh;
-    background-color:rgb(160, 106, 106);
+    /* background-color: #328E6E; */
 }
 
 :where(.config-container, .quiz-container, .result-container){
-    /* display: none; */
+    display: none;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
 }
 
 .config-container{
-    display: none;
+    display: block;
     width: 415px;
     padding: 25px;
     text-align: center; 
-    background-color: #fff;
+    background-color:#fff;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
 }
@@ -114,7 +114,6 @@ body{
 }
 
 .quiz-container{
-    display: block;
     width: 480px;
 }
 
@@ -142,6 +141,7 @@ body{
     padding: 7px 9px;
     borfer-radius: 6px;
     background: #32313C;
+    transition:  0.3s ease;
 }
 
 .quiz-header .quiz-timer span{
@@ -178,10 +178,12 @@ body{
     transition: all 0.3s ease;
 }
 
-.quiz-content .answer-option .span{
+.quiz-content .answer-option .material-symbols-rounded {
     display: block;
     flex-shrink: 0;
     margin: -4px -3px -4px 12px;
+    font-size: 22px;
+    vertical-align: middle;
 }
 
 .quiz-content .answer-option.correct{
@@ -217,6 +219,7 @@ body{
 .quiz-footer .next-question-btn{
     display: inline-flex;
     gap: 5px;
+    visibility: hidden;
     align-items: center;
     padding: 9px 17px;
 }
